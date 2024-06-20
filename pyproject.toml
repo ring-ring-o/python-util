@@ -1,0 +1,24 @@
+[project]
+name = "python-util"
+version = "0.1.0"
+description = "python関連のutil集"
+dependencies = [
+    "pydantic>=2.7.4",
+    "polars>=0.20.31",
+]
+readme = "README.md"
+requires-python = ">= 3.12"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = []
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src"]
